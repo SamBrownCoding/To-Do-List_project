@@ -142,3 +142,73 @@ input {
 /*#endregion*/
 
 
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.2s;
+    border-radius: 30px;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #b0c9fb;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #c335d694;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #564c9e;
+    color: #fff;
+    text-decoration: line-through;
+    text-decoration-color: #f0003c;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '\2713';
+    position: absolute;
+    color: #f0003c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    top: 6px;
+    left: 15px;
+    transform: rotate(0deg);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #eee;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background: #f0003c;
+    color: #eee;
+    border-radius: 50%;
+    transform: scale(0.8);
+    right: 0px;
+}
